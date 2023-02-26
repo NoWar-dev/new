@@ -61,8 +61,10 @@
 
 }
 
+
 .link-block {
   margin-bottom: 50px;
+  color: aqua;
 }
 
 .link-two:not(:last-child) {
@@ -78,6 +80,16 @@
   background-repeat: no-repeat;
   padding-left: 30px;
 }
+
+.link-tree:hover {
+  color: rgb(177, 221, 221);
+  
+}
+
+.link-tree:active {
+  color: aqua;
+}
+
 .container {
   margin: 0 auto;
   padding: 80px 0;
