@@ -92,6 +92,11 @@
 
 
 
+.link-download{
+  top: -6px;
+  left: -30px;
+  position: absolute;
+} 
 
 .link-two:not(:last-child) {
   margin-right: 25px;
@@ -101,14 +106,49 @@
   font-weight: 700;
   font-size: 18px;
   color: #3f2aff;
-  background-image: url("../img/download.png");
   background-position: left center;
   background-repeat: no-repeat;
-  padding-left: 30px;
+  
+  position: relative;
+  z-index: 2;
+  transition-property: background-color, color;
+  transition-duration: .3s, .3s;
+  transition-timing-function: ease-in-out;
+  outline: none;
+  z-index: 1;
 }
+
+
+.link-tree::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f3f;
+  border-radius: 10px;
+  display: none;
+  width: 370px;
+  height: 38px;
+  transform: scaleX(0);
+  transition: transform .3s;
+  z-index: -1;
+}
+
+
+.link-tree:focus:not(:active)::after{
+  top: -8px;
+  left: -30px;
+  display: block;
+  transform: scaleX(1);
+  outline: none;
+}
+
 
 .link-tree:hover {
   color: rgb(177, 221, 221);
+  cursor: pointer;
   
 }
 
