@@ -58,9 +58,25 @@
   background-color: #3f2aff;
   display: inline-block;
   padding: 24px 49px;
-
+  transition-duration: .3s;
+  position: relative;
+  top:0;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
 }
 
+.link-two:hover{
+  background-color: #1606a7;
+  box-shadow: 0 5px 0 #f3f;
+  top: 2px;
+}
+.link-two:active{
+  top: 5px;
+  background-color: #3f2aff;
+  box-shadow:none ;
+}
 
 .link-block {
   margin-bottom: 50px;
@@ -73,6 +89,9 @@
 .link-block:active{
   color: aqua;
 }
+
+
+
 
 .link-two:not(:last-child) {
   margin-right: 25px;
